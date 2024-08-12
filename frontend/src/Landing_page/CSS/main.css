@@ -1,0 +1,942 @@
+body{
+    overflow-x: hidden;
+}
+
+
+/* 
+-----------
+| NAVBAR  |
+-----------
+*/
+
+
+header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 2rem; */
+    padding-right: 4rem;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1) ;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    width: 100%;
+}
+
+header .logo{
+    width: 14rem;
+    height: 3rem;
+    padding-left: 15px;
+    margin-left: 2rem;
+}
+
+nav a{
+    margin: 0 ;
+    color: #A4133C;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 20px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: #7d0829;
+}
+
+
+header .nav-btn{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    color: #A4133C;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+
+
+
+@media only screen and (max-width : 1024px) {
+    
+    header .nav-btn{
+        visibility: visible;
+        opacity: 1;
+        
+    }
+    header nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 100;
+        transition: 1s;
+        transform: translateY(-100vh)      
+    }
+
+    header .responsive_nav{
+        transform: none;
+    }
+
+    nav .nav-close-btn{
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+    }
+    nav a{
+        font-size: 0.8rem;
+        /* margin: 3rem 0.5rem 0; */
+        font-weight: normal;
+        padding: 1px;
+    }
+}
+
+
+
+/* 
+------------
+| Home Page |
+------------
+*/
+
+.hero{
+    min-height: calc(100vh - 80px);
+}
+
+.sign-up-btn{
+    background-color: #A4133C;
+    color: #fff;
+}
+
+/* 
+---------
+| TRUST |
+---------
+*/
+
+/* .Trust-cont{
+    width: 70%;
+} */
+
+.Trust-title1{
+    color: #424242;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.Trust-title2{
+    font-size: 20px;
+    margin-top: 1rem;
+    color: #424242;
+    font-weight: 500;
+}
+
+.Trust-content{
+    padding: 1rem 0;
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+}
+
+.data-section{
+    width: 30%;
+}
+
+.explore-prod{
+    font-size: 20px;
+    font-weight: 500;
+    color: #A4133C;
+}
+
+.explore-prod a i{
+    animation: move 3s ease-in-out 0s infinite;
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(1rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.explore-prod:hover{
+    color: #424242;
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width : 1024px) {
+    .data-section, .image-section{
+        width: 100%;
+    }
+    .image-section{
+        margin-top: 2rem;
+    }
+}
+
+
+/* 
+-----------
+| PRICING |
+-----------
+*/
+
+
+
+.price-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+.pricing-images{
+    width: fit-content;
+    padding: 0;
+}
+.pricing-images img{
+    width: 120px;
+    height: auto;
+    display: inline-block;
+    padding: 0;
+}
+
+.price-box p{
+    display: inline-block;
+    font-size: 10px;
+    width: fit-content;
+    padding: 0;
+}
+
+h2.price-heading{
+    color: #424242;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+p.price-desc{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #424242;
+    font-weight: 500;
+}
+
+@media only screen and (max-width : 1024px) {
+    .pricing-content, .pricing-image-cont{
+        width: 100%;
+        padding-left: 1rem;
+        
+    }
+    .pricing-image-cont{
+        padding-left: 2rem;
+    }
+    .see-pricing{
+        width: 100%;
+    }
+}
+
+
+
+/* 
+-------------
+| EDUCATION |
+-------------
+*/
+
+
+.p1{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-bottom: 25px;
+    color: #424242;
+}
+
+.p2,.p3{
+    color: #424242;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width : 1024px) {
+    .ed-cont-3, .ed-cont-4{
+        width: 100%;
+    }
+}
+
+
+/* 
+------------
+| OPEN ACC |
+------------
+*/
+
+
+.open-acc-head{
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+
+.open-acc-desc{
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+
+/* 
+----------
+| FOOTER |
+----------
+*/
+
+
+.footer-container{
+    background-color: #FBFBFB;
+    color: #424242;
+    border: 1px solid #eee;
+    padding-top: 3rem;
+}
+
+.footer-logo{
+    width: 10rem;
+    height: 3rem;
+}
+
+.footer-disclaimer{
+    font-size: 0.65rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #9B9B9B;
+    margin-bottom: 10px;
+}
+
+.line-partition{
+    height: 2px;
+    width: 50%;
+    background-color: #636363;
+    margin: 0.5rem 0;
+}
+
+
+.heading-footer{
+    font-size: 1.125rem;
+    line-height: 2;
+    font-weight: 500;
+    color: #424242;
+    margin-bottom: 10px;
+    
+}
+
+.data-footer ul li a, .data-footer{
+    font-size: 1rem;
+    line-height: 2;
+    font-weight: 500;
+    color: #666;
+    text-decoration: none;
+}
+
+.indi-icon{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.indi-icon:hover{
+    color: #7d0829;
+}
+
+@media only screen and (max-width : 1024px) {
+    .responsive-footer{
+        width: 100%;
+    }
+    .heading-footer{
+        margin-top: 2rem;
+    }
+}
+
+
+/* 
+------------------
+| PAGE NOT FOUND |
+------------------
+*/
+
+
+.page-not-found{
+    width: 50%;
+}
+
+.page-not-found h2{
+    font-size: 1.5rem;
+    color: #424242;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.page-not-found h1{
+    font-size: 2.75rem;
+    color: #424242;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.page-not-found p{
+    font-size: 1.5rem;
+    color: #424242;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.page-not-found p a{
+    color: #A4133C;
+}
+
+.page-not-found p a:hover{
+    color: #424242;
+}
+
+
+/* 
+--------------
+| ABOUT PAGE |
+--------------
+*/
+
+
+.about-hero .quote{
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #424242;
+    border-bottom: 1px solid #eee;
+    padding: 100px 0;
+}
+
+.about-column p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #424242;
+    font-weight: 400;
+}
+
+.about-people .about-image img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+.about-people-container .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    color: #424242;
+}
+
+.about-people .about-desc p{
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #424242;   
+}
+
+.about-people .about-desc p a{
+    color: #9b0d35;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.about-people .about-image h5{
+    font-size: 1.25rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #424242;   
+}
+
+.about-people .about-image p{
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #666;   
+}
+
+
+
+
+.about-people .about-desc p a:hover{
+    color: #424242;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width : 1024px) {
+    .abt-txt{
+        margin: 3rem 0;
+        padding: 20px 0;
+    }
+    .about-column{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .about-hero .quote{
+        font-size: 30px;
+    }
+    .about-image, .about-people{
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+
+/* 
+----------------
+| PRICING PAGE |
+----------------
+*/
+
+.upper-pricing-hero{
+    border-bottom: 1px solid #eee;
+    padding: 100px 0;
+}
+
+.upper-pricing-hero h1{
+    font-size: 2.75rem;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #424242;  
+}
+
+
+.upper-pricing-hero h4{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #424242;  
+}
+
+.lower-pricing-hero .each-card{
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lower-pricing-hero .each-card img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.lower-pricing-hero .each-card h2{
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #424242;  
+}
+
+.lower-pricing-hero .each-card p{
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #666;  
+}
+
+
+.lower-pricing-hero {
+    padding: 100px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-brokerage .row li{
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #666;
+}
+
+
+
+
+@media only screen and (max-width : 1024px) {
+    .each-card{
+        width: 100%;
+    }
+    .pricing-brokerage .row{
+        padding-left: 0;
+    }
+}
+
+
+
+
+/* 
+----------------
+| PRODUCT PAGE |
+----------------
+*/
+
+
+
+.products-hero h1{
+    margin-bottom: 10px;
+    font-size: 2.75rem;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #424242;
+}
+
+.products-hero h3{
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #424242;
+}
+
+.products-hero h5{
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #424242;
+}
+
+.products-hero{
+    border-bottom: 1px solid #eee;
+    padding: 100px 0;
+}
+
+
+.product-universe .row h1{
+    font-size: 2.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #424242;
+}
+
+
+.product-universe .row p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #424242;
+}
+
+.universe-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.universe-img .each-unit{
+    width: 33.333%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.universe-img .each-unit p{
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #9b9b9b;
+}
+
+.universe-img .each-unit img{
+    height: 40px;
+    width: auto;
+}
+
+
+.Technology-data h1{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+
+.Technology-data p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #424242;
+}
+
+
+@media only screen and (max-width : 1024px) {
+    .universe-img .each-unit{
+        width: 100%;
+        padding-top: 2rem;
+    }
+    .leftSecCol{
+        width: 100%;
+    }
+    .Technology-data{
+        padding: 0;
+    }
+    .Technology-data h1{
+        margin-top: 1rem;
+    }
+}
+
+
+
+/* 
+----------------
+| SUPPORT PAGE |
+----------------
+*/
+
+.support-biggest-container{
+    background-color: #A4133C;
+    color: white;
+}
+
+.support-outer-box{
+    height: fit-content;
+    width: 100%;
+    
+    padding: 20px 0;
+    
+}
+
+.support-inner-box .support-titles .title1{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.support-inner-box .support-titles .title2 a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+.support-inner-box .support-content .searchTitle{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.support-inner-box .support-content .superLinks .each-superLink{
+    margin: 0.25rem;
+}
+
+.support-inner-box .support-content .superLinks .each-superLink a{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+.support-column .Featured{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.support-column .extraLinks li{
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.support-ticket-column .heading h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #222;
+}
+
+.support-ticket-column .heading{
+    margin-bottom: 1rem;
+}
+
+.support-ticket-column .heading i{
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.support-ticket-column .links a{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #A4133C;
+    
+}
+
+.support-ticket-column .links div{
+    margin-bottom: 0.75rem;
+}
+
+@media only screen and (max-width : 1024px) {
+    .support-column{
+        width: 100%;
+    }   
+    .support-column .Featured{
+        margin-top: 2rem;
+    }
+    .support-ticket-column{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+/* 
+---------------------------
+| SignUp Page + LOGIN Page|
+---------------------------
+*/
+
+
+.SignUp-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+}
+.SignUp-container .form-container{
+    width: fit-content;
+    padding: 3rem;
+    border: 6px solid #A4133C;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #eae5e89e;
+}
+
+.SignUp-container .form-container form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+}
+
+.SignUp-container .form-container h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #424242;
+    line-height: 1.5;
+    padding-bottom: 2rem;
+}
+
+.SignUp-container .form-container form label{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #424242;
+    line-height: 1.5;
+    padding: 0 1rem 0.5rem 0;
+}
+
+.SignUp-container .form-container form input{
+    border: 2px solid #222;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
+.SignUp-container .form-container form button{
+    width: 100%;
+    border: 2px solid #222;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.SignUp-container .form-container form button:hover{
+    background-color: #A4133C;
+    color: #fff;
+    border-color: #A4133C;
+}
+.SignUp-container .form-container form span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.SignUp-container .form-container form span a:hover{
+    color: #A4133C;
+}
+
+
+@media only screen and (max-width : 1024px) {
+    .SignUp-container .form-container{
+        padding: 1rem;
+    }
+    .SignUp-container .form-container form{
+        padding: 0.5rem;
+    }
+}
+
+

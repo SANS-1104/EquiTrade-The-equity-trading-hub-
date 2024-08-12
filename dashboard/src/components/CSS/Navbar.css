@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    overflow-y: hidden;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 70%;
+  padding-left: 2rem;
+}
+
+header .logo {
+  width: fit-content;
+  height: 3rem;
+  padding: 5px;
+}
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  color: #022083;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+.image-routes p{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nifty,
+.sensex {
+  width: fit-content;
+}
+
+.nifty .index, .sensex .index, .nifty .index-points , .sensex .index-points{
+  font-size: 1.2rem;
+}
+
+.nifty-sensex {
+  width: 32%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-right: 2px solid gray;
+  padding: 0 2rem;
+}
+
+.image-routes {
+  width: 68%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.profile {
+  width: fit-content;
+}
+
+.profile .username {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+  .nifty-sensex {
+    padding: 0;
+  }
+  .image-routes {
+    padding: 0;
+  }
+
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 100;
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  header .responsive_nav {
+    transform: none;
+    padding-left: 0;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 3rem;
+  }
+  nav a {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 2.5rem 0.25rem 0;
+  }
+  .image-routes p {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  .nifty .index, .sensex .index, .nifty .index-points , .sensex .index-points{
+    font-size: 0.9rem;
+  }
+  .nifty .index-points{
+    margin-right: 0;
+  }
+}
