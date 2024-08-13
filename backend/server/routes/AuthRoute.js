@@ -3,8 +3,8 @@ const { userVerification } = require("../middlewares/AuthMiddleware");
 const router = require("express").Router();
 
 // Define routes with username as a route parameter
-router.post('/signup/:username', Signup);
-router.post('/login/:username', Login);
+router.post('/signup/', Signup);
+router.post('/login/', Login);
 router.post('/', userVerification);
 
 module.exports = router;

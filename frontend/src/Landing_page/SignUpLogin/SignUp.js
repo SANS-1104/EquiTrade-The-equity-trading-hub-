@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
@@ -42,11 +42,11 @@ const Signup = () => {
           },
           { withCredentials: true } // Ensure credentials are included
         );
-        const { success, message } = data;
+        const { success, message, username } = data; // Extract the username from the response
         if (success) {
           handleSuccess(message);
           setTimeout(() => {
-            window.location.href = "http://localhost:3001"; // Redirect to the Dashboard URL
+            window.location.href = `http://localhost:3001/${username}`; // Redirect to the Dashboard URL
           }, 1000);
         } else {
           handleError(message);
@@ -61,6 +61,7 @@ const Signup = () => {
         username: "",
       });
     };
+    
 
   return (
     <div className="SignUp-container">

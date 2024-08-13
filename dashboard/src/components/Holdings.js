@@ -1,9 +1,7 @@
 import { React, useState, useEffect } from "react";
 import './CSS/main.css';
 import axios from "axios";
-
-
-// import { holdings } from "../data/data";
+import { LineChart } from "./LineGraph";
 
 
 function Holdings() {
@@ -12,10 +10,23 @@ function Holdings() {
   useEffect(()=>{
     axios.get("http://localhost:8080/allHoldings").then((res) =>{
       setAllHoldings(res.data);
-      console.log(res.data);
-      
     })
   },[])
+
+  const labels = allHoldings.map((subArray) => subArray['name']);
+  const data ={
+    labels,
+    datasets:[
+      {
+        label: "Stock Price",
+        data: allHoldings.map((stock)=> stock.price ),
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        borderColor: 'rgba(255,99,132,0.5)',
+        tension: 0.1
+      }
+    ]
+  }
+  
 
   return (
     <>
@@ -74,6 +85,8 @@ function Holdings() {
           <p>P&L</p>
         </div>
       </div>
+
+      <LineChart data={data}/>
     </>
   );
 }

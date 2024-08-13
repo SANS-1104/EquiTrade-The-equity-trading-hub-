@@ -11,7 +11,7 @@ const uri = process.env.MONGO_URL;
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const allowedOrigins = ['http://localhost:3000','http://localhost:3001'];
+const allowedOrigins = ['http://localhost:3000','http://localhost:3001', 'http://localhost:3001/:username/'];
 
 const corsOptions = {
   origin: (origin, callback) => {
@@ -219,13 +219,13 @@ app.listen(port, () => {
   console.log("DB Connected!");
 });
 
-app.use(
-  cors({
-    origin: ["http://localhost:8080"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["http://localhost:8080"],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   })
+// );
 app.use(cookieParser());
 
 app.use(express.json());

@@ -5,13 +5,14 @@ import './CSS/main.css';
 import Navbar from './Navbar';
 
 function Home() {
-    const { username } = useParams(); // Get the username from the URL
+    const { username } = useParams(); 
+     
 
     return (
         <>
-            <Navbar />
+            <Navbar  username={username}/>
             <div className='mt-20'></div>
-            <Dashboard username={username} /> {/* Pass username as a prop */}
+            <Dashboard username={username} />
         </>        
     );
 }
