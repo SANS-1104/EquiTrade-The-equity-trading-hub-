@@ -15,6 +15,10 @@ function Navbar({ username }) {
     const handleProfileClick = () => {
         setIsProfileDropdownOpen(!isProfileDropdownOpen);
     }
+    
+    const handleLogout = ()=>{
+        window.location.href = 'http://localhost:3000/';
+    }
 
     const menuClass = 'menu';
     const activeMenuClass = 'menu selected';
@@ -63,9 +67,19 @@ function Navbar({ username }) {
                         <FaTimes />
                     </button>
                 </nav>
-                <div className="profile" onClick={handleProfileClick}>
-                    <div className="avatar"> {username[0]}{username[1]} </div>
-                    <p className="username">{username}</p>
+                <div className='profile-cont'>
+                    <div className="profile" onClick={handleProfileClick}>
+                        <div className="avatar"> {username[0]}{username[1]} </div>
+                        <p className="username">{username}</p>
+                        
+                    </div>
+                    <div className='profile-dropdown-container'>
+                    {isProfileDropdownOpen && (
+                            <div className='profile-dropdown text-center'>
+                                <p onClick={handleLogout}>Logout</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
                 <button onClick={showNavBar} className='nav-btn'>
                     <FaBars />

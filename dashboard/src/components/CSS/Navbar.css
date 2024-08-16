@@ -92,6 +92,25 @@ header .nav-btn {
   font-weight: bold;
 }
 
+
+.profile-cont{
+  display: flex;
+  justify-content:flex-end;
+  flex-direction: column;
+  align-items:flex-end;
+  flex-wrap: wrap;
+}
+
+.profile-dropdown{
+  width: fit-content;
+  height: fit-content;
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+
 @media only screen and (max-width: 1024px) {
   header {
     padding: 0.5rem 1rem;

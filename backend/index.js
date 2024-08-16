@@ -11,7 +11,7 @@ const uri = process.env.MONGO_URL;
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const allowedOrigins = ['http://localhost:3000','http://localhost:3001', 'http://localhost:3001/:username/'];
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001/:username/', 'http://localhost:3001'];
 
 const corsOptions = {
   origin: (origin, callback) => {
@@ -21,13 +21,14 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true // Allow credentials (cookies) to be sent
+  credentials: true 
 };
 app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
 // One time setup to add dummy data to DB
+
 const { HoldingsModel } = require("./server/model/HoldingsModel");
 // app.get("/addHoldings", async (req, res) => {
 //   let tempHoldings = [
@@ -195,6 +196,34 @@ const { PositionsModel } = require("./server/model/PositionsModel");
 //   res.send('Positions data saved!');
 // });
 
+const { OrdersModel } = require("./server/model/OrdersModel");
+// app.get("/addOrders", async (req, res) => {
+//   let tempOrders = [
+//     {
+//       name: "INFY",
+//       qty :1,
+//       price : 100.6,
+//       mode: "BUY",
+//     },
+//     {
+//       name: "WIPRO",
+//       qty :10,
+//       price : 576.5,
+//       mode: "BUY",
+//     },
+    
+//   ];
+//   tempOrders.forEach((item) => {
+//     let newOrder = new OrdersModel({
+//       name: item.name,
+//       qty :item.qty,
+//       price : item.price,
+//       mode: item.mode,
+//     });
+//     newOrder.save();
+//   });
+//   res.send('Orders data saved!');
+// });
 
 // METHOD TO DISPLAY DB DATA ON Dashboard - by creating an API data endpoint
 
@@ -209,6 +238,18 @@ app.get('/allPositions', async (req,res) => {
 });
 
 
+// app.post("/newOrder", async (req, res) => {
+//   let newOrder = new OrdersModel({
+//     name: req.body.name,
+//     qty: req.body.qty,
+//     price: req.body.price,
+//     mode: req.body.mode,
+//   });
+
+//   newOrder.save();
+
+//   res.send("Order saved!");
+// });
 
 
 
